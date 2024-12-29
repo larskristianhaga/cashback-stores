@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/tls"
 	"encoding/json"
 	"io"
 	"log"
@@ -57,7 +58,9 @@ func main() {
 func getSasShops() SASShopsData {
 	var shopUrl = "https://onlineshopping.loyaltykey.com/api/v1/shops?filter[channel]=SAS&filter[language]=nb&filter[country]=NO&filter[amount]=5000&filter[compressed]=true"
 
-	response, err := http.Get(shopUrl)
+	client := createInsecureHTTPClient()
+
+	response, err := client.Get(shopUrl)
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -84,7 +87,9 @@ func getSasShops() SASShopsData {
 func getViatrumfShops() ViaTrumfShopData {
 	var shopUrl = "https://trumfnetthandel.no/category/paged/all/999/0/popularity/"
 
-	response, err := http.Get(shopUrl)
+	client := createInsecureHTTPClient()
+
+	response, err := client.Get(shopUrl)
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -110,6 +115,13 @@ func getViatrumfShops() ViaTrumfShopData {
 	}
 
 	return ViaTrumfShopData{Data: shops}
+}
+
+func createInsecureHTTPClient() *http.Client {
+	customTransport := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+	return &http.Client{Transport: customTransport}
 }
 
 type SASShopsData struct {
