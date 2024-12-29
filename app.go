@@ -18,41 +18,53 @@ func main() {
 	}
 	log.Println("App live and listening on port:", port)
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		log.Println("Request received")
-
-		log.Println("Fetching SAS shops")
-		getSasShops := getSasShops()
-		log.Println("Found", len(getSasShops.Data), "SAS shops")
-
-		log.Println("Fetching ViaTrumf shops")
-		getViatrumfShops := getViatrumfShops()
-		log.Println("Found", len(getViatrumfShops.Data), "ViaTrumf shops")
-
-		// Combine the two data sets into one
-		combinedData := struct {
-			SASShopsData     SASShopsData
-			ViaTrumfShopData ViaTrumfShopData
-		}{
-			SASShopsData:     SASShopsData{},
-			ViaTrumfShopData: ViaTrumfShopData{},
-		}
-
-		combinedData.SASShopsData = getSasShops
-		combinedData.ViaTrumfShopData = getViatrumfShops
-
-		// Convert the combined data to JSON
-		combinedDataJSON, err := json.Marshal(combinedData)
-		if err != nil {
-			log.Fatal(err.Error())
-		}
-
-		// Write the JSON to the response
-		w.Header().Set("Content-Type", "application/json")
-		_, _ = w.Write(combinedDataJSON)
-	})
+	http.HandleFunc("/", RootHandler)
+	http.HandleFunc("/ping", PingHandler)
+	http.HandleFunc("/health", HealthHandler)
 
 	log.Fatal(http.ListenAndServe(":"+port, nil))
+}
+
+func RootHandler(w http.ResponseWriter, _ *http.Request) {
+	log.Println("Request received")
+
+	log.Println("Fetching SAS shops")
+	getSasShops := getSasShops()
+	log.Println("Found", len(getSasShops.Data), "SAS shops")
+
+	log.Println("Fetching ViaTrumf shops")
+	getViatrumfShops := getViatrumfShops()
+	log.Println("Found", len(getViatrumfShops.Data), "ViaTrumf shops")
+
+	// Combine the two data sets into one
+	combinedData := struct {
+		SASShopsData     SASShopsData
+		ViaTrumfShopData ViaTrumfShopData
+	}{
+		SASShopsData:     SASShopsData{},
+		ViaTrumfShopData: ViaTrumfShopData{},
+	}
+
+	combinedData.SASShopsData = getSasShops
+	combinedData.ViaTrumfShopData = getViatrumfShops
+
+	// Convert the combined data to JSON
+	combinedDataJSON, err := json.Marshal(combinedData)
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
+	// Write the JSON to the response
+	w.Header().Set("Content-Type", "application/json")
+	_, _ = w.Write(combinedDataJSON)
+}
+
+func PingHandler(w http.ResponseWriter, _ *http.Request) {
+	_, _ = w.Write([]byte("pong"))
+}
+
+func HealthHandler(w http.ResponseWriter, _ *http.Request) {
+	_, _ = w.Write([]byte("I'm healthy"))
 }
 
 func getSasShops() SASShopsData {
