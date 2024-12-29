@@ -36,49 +36,15 @@ func RootHandler(w http.ResponseWriter, _ *http.Request) {
 	getViatrumfShops := getViatrumfShops()
 	log.Println("Found", len(getViatrumfShops.Data), "ViaTrumf shops")
 
-	// Combine the data into a single JSON object of type APIResponse.
-	var combinedDataMap = make(map[string]APIResponseData)
+	log.Println("Combining data")
+	combinedUniqueData := combineData(getSasShops, getViatrumfShops)
 
-	for _, sasShop := range getSasShops.Data {
-		combinedDataMap[sasShop.Name] = APIResponseData{
-			Name:   sasShop.Name,
-			Source: []string{sasShop.Source},
-			SasOnlineShoppingExtra: SasOnlineShoppingExtra{
-				UUID: sasShop.UUID,
-				Slug: sasShop.Slug,
-			},
-		}
-	}
-
-	for _, viaTrumfShop := range getViatrumfShops.Data {
-		if data, exists := combinedDataMap[viaTrumfShop.Name]; exists {
-			data.Source = append(data.Source, viaTrumfShop.Source)
-			data.TrumfNetthandelExtra = TrumfNetthandelExtra{
-				Slug: viaTrumfShop.Name,
-			}
-			combinedDataMap[viaTrumfShop.Name] = data
-		} else {
-			combinedDataMap[viaTrumfShop.Name] = APIResponseData{
-				Name:   viaTrumfShop.Name,
-				Source: []string{viaTrumfShop.Source},
-				TrumfNetthandelExtra: TrumfNetthandelExtra{
-					Slug: viaTrumfShop.Name,
-				},
-			}
-		}
-	}
-
-	var combinedData []APIResponseData
-	for _, data := range combinedDataMap {
-		combinedData = append(combinedData, data)
-	}
-
-	combinedDataJSON, err := json.Marshal(APIResponse{Data: combinedData})
+	log.Println("Marshalling data")
+	combinedDataJSON, err := json.Marshal(APIResponse{Data: combinedUniqueData})
 	if err != nil {
 		log.Fatal(err.Error())
 	}
 
-	// Write the JSON to the response
 	w.Header().Set("Content-Type", "application/json")
 	_, _ = w.Write(combinedDataJSON)
 }
@@ -160,6 +126,74 @@ func createInsecureHTTPClient() *http.Client {
 	return &http.Client{Transport: customTransport}
 }
 
+func combineData(sasShops SASShopsData, viaTrumfShops ViaTrumfShopData) []APIResponseData {
+	var combinedDataMap = make(map[string]APIResponseData)
+
+	for _, sasShop := range sasShops.Data {
+
+		combinedDataMap[sasShop.Name] = APIResponseData{
+			Name:   sasShop.Name,
+			Source: []string{sasShop.Source},
+		}
+		if sasShop.Source == Sasonlineshopping {
+			data := combinedDataMap[sasShop.Name]
+			data.SasOnlineShoppingExtra = &SasOnlineShoppingExtra{
+				UUID: sasShop.UUID,
+				Slug: sasShop.Slug,
+			}
+			combinedDataMap[sasShop.Name] = data
+		}
+
+	}
+
+	for _, viaTrumfShop := range viaTrumfShops.Data {
+
+		if data, exists := combinedDataMap[viaTrumfShop.Name]; exists {
+			data.Source = append(data.Source, viaTrumfShop.Source)
+			if viaTrumfShop.Source == Trumfnetthandel {
+				data.TrumfNetthandelExtra = &TrumfNetthandelExtra{
+					Slug: viaTrumfShop.Name,
+				}
+			}
+			combinedDataMap[viaTrumfShop.Name] = data
+		} else {
+			combinedDataMap[viaTrumfShop.Name] = APIResponseData{
+				Name:   viaTrumfShop.Name,
+				Source: []string{viaTrumfShop.Source},
+			}
+			if viaTrumfShop.Source == Trumfnetthandel {
+				data := combinedDataMap[viaTrumfShop.Name]
+				data.TrumfNetthandelExtra = &TrumfNetthandelExtra{
+					Slug: viaTrumfShop.Name,
+				}
+				combinedDataMap[viaTrumfShop.Name] = data
+			}
+		}
+
+	}
+
+	var combinedData []APIResponseData
+	for _, data := range combinedDataMap {
+		if len(data.Source) > 0 {
+			if !contains(data.Source, Trumfnetthandel) {
+				data.TrumfNetthandelExtra = &TrumfNetthandelExtra{}
+			}
+			combinedData = append(combinedData, data)
+		}
+	}
+
+	return combinedData
+}
+
+func contains(slice []string, item string) bool {
+	for _, s := range slice {
+		if s == item {
+			return true
+		}
+	}
+	return false
+}
+
 type SASShopsData struct {
 	Data []SASShop `json:"data"`
 }
@@ -185,19 +219,19 @@ type APIResponse struct {
 }
 
 type APIResponseData struct {
-	Name                   string                 `json:"name"`
-	Source                 []string               `json:"source"`
-	TrumfNetthandelExtra   TrumfNetthandelExtra   `json:"trumfnetthandel_extra"`
-	SasOnlineShoppingExtra SasOnlineShoppingExtra `json:"sasonlineshopping_extra"`
+	Name                   string                  `json:"name"`
+	Source                 []string                `json:"source"`
+	TrumfNetthandelExtra   *TrumfNetthandelExtra   `json:"trumfnetthandel_extra,omitempty"`
+	SasOnlineShoppingExtra *SasOnlineShoppingExtra `json:"sasonlineshopping_extra,omitempty"`
 }
 
 type TrumfNetthandelExtra struct {
-	Slug string `json:"slug"`
+	Slug string `json:"slug,omitempty"`
 }
 
 type SasOnlineShoppingExtra struct {
-	UUID string `json:"uuid"`
-	Slug string `json:"slug"`
+	UUID string `json:"uuid,omitempty"`
+	Slug string `json:"slug,omitempty"`
 }
 
 const (
