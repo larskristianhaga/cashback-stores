@@ -1,4 +1,4 @@
-name: "Deploy to Fly.io"
+name: "Deploy app to Fly.io"
 on:
   workflow_dispatch:
   push:
@@ -10,12 +10,13 @@ jobs:
     name: "Deploy app to Fly.io"
     runs-on: ubuntu-latest
     concurrency: deploy-group
+
     steps:
       - name: "Checkout code"
         uses: actions/checkout@v4
 
       - name: "Setup Flyctl"
-        uses: superfly/flyctl-actions/setup-flyctl@master
+        uses: superfly/flyctl-actions/setup-flyctl@1.5
 
       - name: "Deploy to Fly.io"
         run: flyctl deploy --remote-only
