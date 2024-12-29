@@ -1,0 +1,1259 @@
+{
+  "data": [
+    {
+      "uuid": "01896310-f77f-72c9-9b07-830ad79ad27f",
+      "name": "Acer",
+      "slug": "acer"
+    },
+    {
+      "uuid": "0189630b-032e-7144-9c8f-ef0dde6f2221",
+      "name": "Adams Matkasse",
+      "slug": "adams-matkasse"
+    },
+    {
+      "uuid": "0189630e-5d7e-709b-a148-a7237fda75ee",
+      "name": "Adidas",
+      "slug": "adidas"
+    },
+    {
+      "uuid": "0189630c-51f8-7136-964c-4b331c9b083d",
+      "name": "Adlibris",
+      "slug": "adlibris-no"
+    },
+    {
+      "uuid": "01896311-3b0c-733b-898b-c6563e0538bc",
+      "name": "AEG",
+      "slug": "aeg"
+    },
+    {
+      "uuid": "018e3812-d948-725c-b796-8c3e17bf12d4",
+      "name": "Agoda",
+      "slug": "agoda"
+    },
+    {
+      "uuid": "01896311-c762-72e7-8110-9489cd35dfb2",
+      "name": "Agood Company",
+      "slug": "agood-company"
+    },
+    {
+      "uuid": "01896312-874a-732c-a16e-33ad6b422841",
+      "name": "Hej Albert",
+      "slug": "albert"
+    },
+    {
+      "uuid": "0189630c-d887-72b0-889d-aec1f78825e4",
+      "name": "Allente",
+      "slug": "viasat"
+    },
+    {
+      "uuid": "0189630f-d52a-735b-8aff-4baa02398fe7",
+      "name": "Anodyne",
+      "slug": "anodyne"
+    },
+    {
+      "uuid": "0189630e-d9c7-7392-818a-32f9ec1fabe9",
+      "name": "Apotekhjem",
+      "slug": "apotekhjem"
+    },
+    {
+      "uuid": "01896307-ed8b-737f-9bf9-3fa9286a565c",
+      "name": "Apple",
+      "slug": "apple"
+    },
+    {
+      "uuid": "01896312-6db6-70d8-b14a-33945de0c553",
+      "name": "Arons",
+      "slug": "arons"
+    },
+    {
+      "uuid": "018ec731-40cb-735f-8f7f-e6011f9828f1",
+      "name": "Babyland",
+      "slug": "babyland"
+    },
+    {
+      "uuid": "01896307-b0ac-716a-a2a0-24f68a8b28a5",
+      "name": "Babyshop",
+      "slug": "babyshop"
+    },
+    {
+      "uuid": "01896309-7c76-7237-921c-5ddc4d54199c",
+      "name": "Bakeren og Kokken",
+      "slug": "bagaren-och-kocken"
+    },
+    {
+      "uuid": "0189630d-1d73-7288-8240-1cdc7bc96ed9",
+      "name": "Bambox",
+      "slug": "bambox"
+    },
+    {
+      "uuid": "01896312-1cd0-710c-bb69-43d1c64d7135",
+      "name": "Bang & Olufsen",
+      "slug": "bang-olufsen"
+    },
+    {
+      "uuid": "01896311-c079-70ee-b11c-711cf8c75d60",
+      "name": "Banggood",
+      "slug": "banggood"
+    },
+    {
+      "uuid": "0189630b-f3fb-73c9-b1ca-bb8ea16bb6c9",
+      "name": "Barbershop.no",
+      "slug": "barbershop.no"
+    },
+    {
+      "uuid": "01896308-01a2-7058-a537-bb687b41c4b4",
+      "name": "batteriexperten.com",
+      "slug": "batteriexperten"
+    },
+    {
+      "uuid": "0193b517-b213-7106-a9e6-68acc50f7582",
+      "name": "Bærum Energi",
+      "slug": "baerum-energi"
+    },
+    {
+      "uuid": "01896309-dadd-714f-8f53-274cc4f14d01",
+      "name": "Beautycos",
+      "slug": "beautycos"
+    },
+    {
+      "uuid": "0189630b-202b-7175-a5a3-b34df07d8009",
+      "name": "Bedre Nætter",
+      "slug": "bedre-nætter"
+    },
+    {
+      "uuid": "0189630a-54a9-733e-9052-ee6581674e20",
+      "name": "Bemz",
+      "slug": "bemz"
+    },
+    {
+      "uuid": "01896308-503c-73a5-9ec8-382fd13dc580",
+      "name": "Björn Borg",
+      "slug": "bjorn-borg"
+    },
+    {
+      "uuid": "01896307-d495-71ba-b745-e065da1ab693",
+      "name": "Bladkongen.no",
+      "slug": "bladkongen.no"
+    },
+    {
+      "uuid": "0189630f-2b90-7277-b7ef-4bc11dad8863",
+      "name": "BliVakker",
+      "slug": "blivakker"
+    },
+    {
+      "uuid": "018d5efb-3d80-70d8-9120-3a2ed454b03b",
+      "name": "Bodum",
+      "slug": "bodum"
+    },
+    {
+      "uuid": "018abc11-5c37-714d-bd3d-21020096339e",
+      "name": "Bodylab",
+      "slug": "bodylab"
+    },
+    {
+      "uuid": "01896307-a48e-7282-a8f3-2508750f0b14",
+      "name": "Bodystore",
+      "slug": "bodystore.com"
+    },
+    {
+      "uuid": "01896308-b044-72fb-9ef9-273035e78cad",
+      "name": "Boohoo",
+      "slug": "boohoo"
+    },
+    {
+      "uuid": "0189630d-af8b-717b-b0cb-1f385bd015f5",
+      "name": "Bookbeat",
+      "slug": "bookbeat"
+    },
+    {
+      "uuid": "01896311-2eb0-70da-a02e-4c9680bede77",
+      "name": "BOSE",
+      "slug": "bose-1"
+    },
+    {
+      "uuid": "0192e725-fdf8-715a-ad92-7dda686dbb6d",
+      "name": "Brando",
+      "slug": "brando"
+    },
+    {
+      "uuid": "01896310-8ae4-734d-9de5-c494e2e99efc",
+      "name": "Brilleland",
+      "slug": "brilleland"
+    },
+    {
+      "uuid": "01896309-b8ae-7129-9039-516c2dbedf13",
+      "name": "Bubbleroom",
+      "slug": "bubbleroom"
+    },
+    {
+      "uuid": "01896311-00ca-7046-bc5a-4f6dda3311c0",
+      "name": "BYIC",
+      "slug": "byic"
+    },
+    {
+      "uuid": "0189630a-38d6-72e4-a86f-dd70aa3874a5",
+      "name": "Care of Carl",
+      "slug": "care-of-carl"
+    },
+    {
+      "uuid": "01896309-b0ae-7040-94f9-afab878de2e6",
+      "name": "Cellbes",
+      "slug": "cellbes"
+    },
+    {
+      "uuid": "0189630b-0027-70f4-92db-63aaa285c05a",
+      "name": "Charlies hus",
+      "slug": "charlies-hus"
+    },
+    {
+      "uuid": "01896309-850a-71db-86b3-69229f093274",
+      "name": "Christiania Glassmagasin",
+      "slug": "christiania-glasmagasin"
+    },
+    {
+      "uuid": "0189630e-21d9-70b4-9f7a-92a6704964ac",
+      "name": "Computersalg",
+      "slug": "computersalg"
+    },
+    {
+      "uuid": "0189630e-0bd3-72c2-a84d-9bc1f40f4a70",
+      "name": "COS",
+      "slug": "cos"
+    },
+    {
+      "uuid": "0189630a-a3ce-727d-aced-b9ed5d34a93f",
+      "name": "Coverbrands",
+      "slug": "coverbrands"
+    },
+    {
+      "uuid": "018e418d-ffc9-7350-b5e8-b6192a9fee44",
+      "name": "CruiseDirect",
+      "slug": "cruisedirect"
+    },
+    {
+      "uuid": "0189630f-56ec-7037-a266-17d4ee2e4b44",
+      "name": "CyberGhost VPN",
+      "slug": "cyberghost-vpn"
+    },
+    {
+      "uuid": "0189630a-7da1-7339-ab83-97496fdbc9c4",
+      "name": "Daily Sports",
+      "slug": "dailysports"
+    },
+    {
+      "uuid": "0189630c-d6c9-73a0-9f5f-321a31b3a384",
+      "name": "DanCenter",
+      "slug": "dancenter"
+    },
+    {
+      "uuid": "01896308-a32a-7301-8110-e1b4a6023301",
+      "name": "Daniel Wellington",
+      "slug": "daniel-wellington"
+    },
+    {
+      "uuid": "0189630a-e49b-73fa-b65e-eb736c28f11b",
+      "name": "dekkonline.com",
+      "slug": "dekkonline.no"
+    },
+    {
+      "uuid": "01896308-ec70-713b-93a1-a86df35f3921",
+      "name": "Dentaworks",
+      "slug": "dentaworks"
+    },
+    {
+      "uuid": "01896308-2566-711d-ac9b-a3f8eae463db",
+      "name": "Dentway",
+      "slug": "dentway"
+    },
+    {
+      "uuid": "0189630f-c446-7254-951e-207449a52f43",
+      "name": "Detailshop",
+      "slug": "detailshop"
+    },
+    {
+      "uuid": "0189630f-ec3f-7042-903a-2950e30dfb9c",
+      "name": "Devold",
+      "slug": "devold"
+    },
+    {
+      "uuid": "01896310-f223-705b-b1f0-f8766c5fd093",
+      "name": "DFDS",
+      "slug": "dfds"
+    },
+    {
+      "uuid": "0189630f-3511-7083-a0a4-a815ddbbba38",
+      "name": "Disney+",
+      "slug": "disney+-1"
+    },
+    {
+      "uuid": "01896311-9d2f-7060-9400-d15e21b6368b",
+      "name": "Dogman",
+      "slug": "dogman"
+    },
+    {
+      "uuid": "0189630d-28a5-73c7-a5b0-38ad1f3cbe90",
+      "name": "Drømmerom",
+      "slug": "drømmerom"
+    },
+    {
+      "uuid": "0189630b-a1fd-7133-b07a-084f91874cd8",
+      "name": "Dustin",
+      "slug": "dustin-1"
+    },
+    {
+      "uuid": "01896310-bb05-734c-87c7-a0d8eadfe399",
+      "name": "Dyson",
+      "slug": "dyson"
+    },
+    {
+      "uuid": "01896310-1e04-7083-b83b-6a19deed1cf1",
+      "name": "E-Wheels",
+      "slug": "e-wheels-2"
+    },
+    {
+      "uuid": "01896310-948e-7234-ae45-a0afda613776",
+      "name": "Electrolux",
+      "slug": "electrolux"
+    },
+    {
+      "uuid": "01896311-41e5-71ce-a786-88cf89a16243",
+      "name": "Electrolux Spares & accessories",
+      "slug": "electrolux-spares-accessories"
+    },
+    {
+      "uuid": "0189630d-f2db-71f5-ba8d-da548207ca78",
+      "name": "Elektroimportøren.no",
+      "slug": "elektroimportøren.no"
+    },
+    {
+      "uuid": "0189630a-d108-712a-8856-644fdd60eedb",
+      "name": "Ellos",
+      "slug": "ellos-3"
+    },
+    {
+      "uuid": "0189630d-2d48-7330-b48c-4658f8ebb237",
+      "name": "ELON",
+      "slug": "elon-"
+    },
+    {
+      "uuid": "0189630f-5536-7329-883b-ceffb426d426",
+      "name": "ELSKLING",
+      "slug": "elskling"
+    },
+    {
+      "uuid": "0189630c-53ac-70e1-8f0d-0841144fdf4f",
+      "name": "Eurodel",
+      "slug": "eurodel"
+    },
+    {
+      "uuid": "01896308-d5a1-70c8-84eb-a07e4bcd0d2c",
+      "name": "Euroflorist",
+      "slug": "euroflorist"
+    },
+    {
+      "uuid": "01896308-c0dd-71ea-935a-1c552258e655",
+      "name": "Eurotoys",
+      "slug": "eurotoys"
+    },
+    {
+      "uuid": "01896312-d2eb-700e-a980-6bd2f7f2f3f3",
+      "name": "Evobike",
+      "slug": "evobike"
+    },
+    {
+      "uuid": "018abc11-2a02-735b-8033-090f4cd76a9a",
+      "name": "Extra Optical",
+      "slug": "extraoptical"
+    },
+    {
+      "uuid": "0189630f-ef16-7364-aef4-32a7e20009b8",
+      "name": "Fabel",
+      "slug": "fabel"
+    },
+    {
+      "uuid": "0189630e-f90a-731d-84b2-1094d26349be",
+      "name": "Farmasiet",
+      "slug": "farmasiet"
+    },
+    {
+      "uuid": "0189630e-3572-7186-9686-3ccd8ac6130b",
+      "name": "Farnell",
+      "slug": "farnell"
+    },
+    {
+      "uuid": "0189630a-a836-73ea-9b09-fea8cca33f55",
+      "name": "Festkompaniet",
+      "slug": "festkompaniet"
+    },
+    {
+      "uuid": "01896310-d3b3-72c0-828e-a77261184fbf",
+      "name": "Fitnessshoppen",
+      "slug": "fitnessshoppen"
+    },
+    {
+      "uuid": "0189630e-bc77-7138-baa3-af1e492eb27c",
+      "name": "Footshop.eu",
+      "slug": "footshop.eu"
+    },
+    {
+      "uuid": "01896309-e373-70a7-a93c-65f007a65dd3",
+      "name": "FotoKnudsen",
+      "slug": "fotoknudsen"
+    },
+    {
+      "uuid": "0189630f-988a-7145-9c0d-dd28f5592414",
+      "name": "Fredrik & Louisa",
+      "slug": "fredrik-louisa"
+    },
+    {
+      "uuid": "018ce8ef-9005-73b2-9eab-aa62d65c537a",
+      "name": "G-Star",
+      "slug": "g-star"
+    },
+    {
+      "uuid": "0189630d-2220-726e-b99d-9a1e16f855da",
+      "name": "Gents",
+      "slug": "gents"
+    },
+    {
+      "uuid": "0189630a-28d0-70b3-bbe0-1867fcea0f9d",
+      "name": "Gina Tricot",
+      "slug": "gina-tricot-ab"
+    },
+    {
+      "uuid": "01896309-277a-72c4-8b41-14ab8e37e2f1",
+      "name": "Glossybox",
+      "slug": "glossybox"
+    },
+    {
+      "uuid": "0189630e-f745-73e0-accb-c9f49ce7db64",
+      "name": "Godt levert",
+      "slug": "godt-levert"
+    },
+    {
+      "uuid": "0189630d-fd0e-724a-ab96-1b9bc18ac875",
+      "name": "Green People",
+      "slug": "green-people"
+    },
+    {
+      "uuid": "01896312-dd43-7392-aab6-2b384ab082d1",
+      "name": "Gullfunn",
+      "slug": "gullfunn-1"
+    },
+    {
+      "uuid": "01896307-c0a0-73c3-bb34-1854292ab161",
+      "name": "Gymgrossisten",
+      "slug": "gymgrossisten"
+    },
+    {
+      "uuid": "0189630c-ecb3-72e3-85ad-ca8b587c08df",
+      "name": "H&M",
+      "slug": "h-m"
+    },
+    {
+      "uuid": "01896310-495b-7167-9bb1-1bb2f17b7094",
+      "name": "HairLust",
+      "slug": "hairlust"
+    },
+    {
+      "uuid": "0189630e-0077-7365-979b-baa2f08a1bc7",
+      "name": "HelloFresh",
+      "slug": "hellofresh"
+    },
+    {
+      "uuid": "018d5538-6322-73d4-bba1-fead8cf1eb29",
+      "name": "Helly Hansen",
+      "slug": "helly-hansen"
+    },
+    {
+      "uuid": "0189630f-264a-70f9-a610-bfd5ff4a2a79",
+      "name": "Herschel Supply Co",
+      "slug": "herschel-supply-company"
+    },
+    {
+      "uuid": "01896310-de2d-7039-a4f2-7938c62656a5",
+      "name": "Holdit",
+      "slug": "holdit"
+    },
+    {
+      "uuid": "0189630f-3ad3-72cf-9292-513db790fab6",
+      "name": "Home-Tex",
+      "slug": "home-tex-1"
+    },
+    {
+      "uuid": "0189630c-993e-7061-bb1a-d41d2272a9bf",
+      "name": "Homeroom",
+      "slug": "homeroom"
+    },
+    {
+      "uuid": "01896312-9172-7005-92fa-338c3de0a075",
+      "name": "House Of Dagmar",
+      "slug": "house-of-dagmar"
+    },
+    {
+      "uuid": "0189630a-b3f1-7132-b07f-16beb096de9f",
+      "name": "Hunkemøller",
+      "slug": "hunkemoller"
+    },
+    {
+      "uuid": "01896311-7c1a-72d4-9564-c76dca08fd81",
+      "name": "Hviit",
+      "slug": "hviit-1"
+    },
+    {
+      "uuid": "0189630c-1ac4-7176-9627-433b2c1773b7",
+      "name": "ICE",
+      "slug": "ice"
+    },
+    {
+      "uuid": "0189630f-4b89-721d-88e7-5b4e2b299f5f",
+      "name": "Ideal of Sweden",
+      "slug": "ideal-of-sweden"
+    },
+    {
+      "uuid": "0189630a-a54c-7011-8f33-054a1e130bfe",
+      "name": "I love dogs",
+      "slug": "ilovedogs"
+    },
+    {
+      "uuid": "01896308-9acc-7096-9b2a-e74389673a4b",
+      "name": "InkClub",
+      "slug": "inkclub"
+    },
+    {
+      "uuid": "0189630b-1a74-72c1-8818-357a2777a7ea",
+      "name": "Inkmann",
+      "slug": "inkmann-2"
+    },
+    {
+      "uuid": "018abc10-e2a1-7029-a2d1-0df7f582fd1c",
+      "name": "Interflora",
+      "slug": "interflora"
+    },
+    {
+      "uuid": "0189630c-7a41-71db-82cc-e43785fdeed3",
+      "name": "Interhome",
+      "slug": "interhome"
+    },
+    {
+      "uuid": "018abc11-d5a3-703e-9a0c-6abafb58d5f7",
+      "name": "Interoptik",
+      "slug": "interoptik"
+    },
+    {
+      "uuid": "0189630a-fa9b-7234-a4ac-8518c60e5deb",
+      "name": "iPhonehuset",
+      "slug": "iphonehuset"
+    },
+    {
+      "uuid": "01896311-52f1-73e7-808c-3b4e7aea9371",
+      "name": "Ishavskraft strøm",
+      "slug": "ishavskraft-strøm"
+    },
+    {
+      "uuid": "01896310-3933-7051-a2d0-a041a003871e",
+      "name": "Jakt & Friluft",
+      "slug": "jakt-friluft"
+    },
+    {
+      "uuid": "01896309-4c40-7174-bd17-a3e09c581377",
+      "name": "JBL.com",
+      "slug": "jbl.com"
+    },
+    {
+      "uuid": "01896308-8ea4-70bd-bddf-56457bf7f5d0",
+      "name": "Jewelbox.no",
+      "slug": "jewelbox.no"
+    },
+    {
+      "uuid": "0189630b-12c3-73e3-ac98-8b7400497796",
+      "name": "Jotex",
+      "slug": "jotex"
+    },
+    {
+      "uuid": "0192e744-9c9e-713b-abd2-3982d9fba326",
+      "name": "Kajakk og Fritid",
+      "slug": "kajakk-og-fritid"
+    },
+    {
+      "uuid": "0191bc56-6ced-715e-abb2-cb27acc9aa66",
+      "name": "Kärcher",
+      "slug": "karcher"
+    },
+    {
+      "uuid": "0189630e-de91-732d-baf8-54bd0aad79fc",
+      "name": "Kate Spade",
+      "slug": "kate-spade"
+    },
+    {
+      "uuid": "0189630f-e2f4-70f8-9e96-f69763665520",
+      "name": "Kinogavekort",
+      "slug": "kinogavekort"
+    },
+    {
+      "uuid": "0189630f-6485-7344-8ba0-244ec2bc7db7",
+      "name": "Kinoklubb",
+      "slug": "kinoklubb"
+    },
+    {
+      "uuid": "01896309-8d97-726b-baed-35342a0d0149",
+      "name": "KitchenTime",
+      "slug": "kitchentime"
+    },
+    {
+      "uuid": "01896312-734c-72c1-9980-4a5923b4462d",
+      "name": "Kitch’n",
+      "slug": "kitchn-norge"
+    },
+    {
+      "uuid": "0189630d-b8f2-71cc-9d1f-3070ccc4c33a",
+      "name": "Kjell & Company",
+      "slug": "kjell-co-no"
+    },
+    {
+      "uuid": "0191bc4e-d584-7233-b84c-5b0ba1abf5f1",
+      "name": "Kjellmann",
+      "slug": "kjellmann"
+    },
+    {
+      "uuid": "01896312-c1e9-72c4-b75b-b67a7a0c3b81",
+      "name": "Kjøpbarnevogn.no",
+      "slug": "kjøpbarnevogn.no"
+    },
+    {
+      "uuid": "01896310-4cf5-73e3-ba30-14f26f67ddb9",
+      "name": "Komplett",
+      "slug": "komplett-1"
+    },
+    {
+      "uuid": "01896309-a6d3-70f0-b920-314a0de651aa",
+      "name": "Lampegiganten",
+      "slug": "lampegiganten"
+    },
+    {
+      "uuid": "01896312-5ad6-728c-816e-b50fd3b1f767",
+      "name": "Länna Møbler",
+      "slug": "lanna-mobler"
+    },
+    {
+      "uuid": "01896312-2e1b-73b3-ac23-db4b5803a8ad",
+      "name": "Lappeliten",
+      "slug": "lappeliten"
+    },
+    {
+      "uuid": "01896310-5de4-71af-9cfa-190c9eebec97",
+      "name": "LEGO",
+      "slug": "lego"
+    },
+    {
+      "uuid": "01896311-b738-7232-b1a7-92c3eb105614",
+      "name": "Lekmer",
+      "slug": "lekmer-1"
+    },
+    {
+      "uuid": "01896311-859b-70f9-876a-a52c61ec5e5a",
+      "name": "Lenovo",
+      "slug": "lenovo-2"
+    },
+    {
+      "uuid": "01896308-75dd-735f-9092-60e741474e5b",
+      "name": "LensOn",
+      "slug": "lenson"
+    },
+    {
+      "uuid": "01896307-db4b-7046-b660-cca58f3d53f2",
+      "name": "Lensway",
+      "slug": "lensway"
+    },
+    {
+      "uuid": "0189630b-bf42-729d-99fa-36e71feb9e53",
+      "name": "Life",
+      "slug": "life-"
+    },
+    {
+      "uuid": "0189630a-9780-71c1-a269-e72cab65f2a4",
+      "name": "Lindex",
+      "slug": "lindex"
+    },
+    {
+      "uuid": "01896311-719b-712a-b20a-9a9e7a433661",
+      "name": "Logitech",
+      "slug": "logitech"
+    },
+    {
+      "uuid": "0189630a-a9bd-73fa-b304-a9602d7d424d",
+      "name": "Lunehjem.no",
+      "slug": "lunehjem.no"
+    },
+    {
+      "uuid": "01896311-bc95-710e-bb1d-ebccfe64d8c2",
+      "name": "Lusini",
+      "slug": "lusini"
+    },
+    {
+      "uuid": "01896308-35e5-7100-9665-4122177f0b78",
+      "name": "Lux-case",
+      "slug": "lux-case"
+    },
+    {
+      "uuid": "0189630f-41cb-714c-8b2f-cb2c7a900d0b",
+      "name": "LYKO",
+      "slug": "lyko-dk"
+    },
+    {
+      "uuid": "0189630a-fd52-73fb-9f58-89a3bded20af",
+      "name": "LYR Design",
+      "slug": "lyr-design"
+    },
+    {
+      "uuid": "0189630f-1697-70cf-bed2-16289ac9b68c",
+      "name": "Lysman",
+      "slug": "lysman"
+    },
+    {
+      "uuid": "01935438-5e6b-7013-9f9d-da93e98bf438",
+      "name": "Maanesten",
+      "slug": "maanesten"
+    },
+    {
+      "uuid": "01896309-94a4-715b-a552-cd41f531107e",
+      "name": "Made4men",
+      "slug": "made4men"
+    },
+    {
+      "uuid": "0189630e-5852-7113-bcf5-bdcefe1241d1",
+      "name": "Mangotango",
+      "slug": "mangotango"
+    },
+    {
+      "uuid": "0189630a-f1ba-7387-8740-900309744638",
+      "name": "Marshall",
+      "slug": "marshall"
+    },
+    {
+      "uuid": "01896308-a975-7164-aa9c-41b2ec9d89e2",
+      "name": "Miinto",
+      "slug": "miinto"
+    },
+    {
+      "uuid": "0189630d-008d-7066-b18c-b4d4cecc7b26",
+      "name": "Monki",
+      "slug": "monki"
+    },
+    {
+      "uuid": "01896308-cd5b-7382-ab36-46aedea6f50d",
+      "name": "MyProtein",
+      "slug": "myprotein"
+    },
+    {
+      "uuid": "0189630c-6bb7-737c-91fe-b7788089ab87",
+      "name": "Navnelapper",
+      "slug": "navnelapper"
+    },
+    {
+      "uuid": "01896312-6fd2-704f-aad5-96c85910b0ac",
+      "name": "Nemdag",
+      "slug": "nemdag"
+    },
+    {
+      "uuid": "0189630f-9c82-72ba-8749-8ae1956283ec",
+      "name": "Netthandelen",
+      "slug": "netthandelen"
+    },
+    {
+      "uuid": "0189630b-afbe-72d2-b39b-47abed99aa1a",
+      "name": "Newchic",
+      "slug": "newchic"
+    },
+    {
+      "uuid": "0189630d-4e7a-7014-9943-41d6625a52b9",
+      "name": "Newport",
+      "slug": "newport"
+    },
+    {
+      "uuid": "0189630c-56c3-7074-8394-13e45ce5c745",
+      "name": "Nextory",
+      "slug": "nextory"
+    },
+    {
+      "uuid": "0189630d-5a39-7035-ae20-23e562d839ad",
+      "name": "Nike",
+      "slug": "nike"
+    },
+    {
+      "uuid": "0189630d-9003-7266-84ef-6291db61aa5e",
+      "name": "Nordic Nest",
+      "slug": "nordic-nest"
+    },
+    {
+      "uuid": "0189630f-e7ef-728b-81eb-be251fef4eb5",
+      "name": "Nordic Print",
+      "slug": "nordic-print"
+    },
+    {
+      "uuid": "01896311-818d-7114-be42-ed67319052a1",
+      "name": "Nordiska Galleriet",
+      "slug": "nordiska-galleriet"
+    },
+    {
+      "uuid": "0189630e-2ae5-7184-adab-1a84e70c6254",
+      "name": "NordVPN",
+      "slug": "nordvpn"
+    },
+    {
+      "uuid": "0189630a-a084-73fb-a865-8fda2d897a29",
+      "name": "Norli",
+      "slug": "norli"
+    },
+    {
+      "uuid": "01896309-9c8d-708e-8df9-bdaffc9bd349",
+      "name": "Norton by Symantec",
+      "slug": "norton-by-symantec"
+    },
+    {
+      "uuid": "0189630e-fc5a-7285-a4e5-e533b6c433e8",
+      "name": "Nupo",
+      "slug": "nupo"
+    },
+    {
+      "uuid": "018c6cdb-9a21-7079-902b-450e50f9e374",
+      "name": "OBH Nordica",
+      "slug": "obh-nordica"
+    },
+    {
+      "uuid": "0189630b-875e-7334-9f19-542ea69129d4",
+      "name": "One.com",
+      "slug": "one.com-2"
+    },
+    {
+      "uuid": "01896311-ab65-7388-a565-3d9e09a3fd2e",
+      "name": "Organic Basics",
+      "slug": "organic-basics"
+    },
+    {
+      "uuid": "0189630d-de8e-70ab-86a4-6a9fa9db16c6",
+      "name": "Oslo Skin Lab",
+      "slug": "oslo-skin-lab"
+    },
+    {
+      "uuid": "01896307-cb70-7078-96e6-9379b454803c",
+      "name": "Outnorth",
+      "slug": "outnorth"
+    },
+    {
+      "uuid": "0189630e-c3e2-72d8-b41a-42a7f567a0a6",
+      "name": "Palace Resorts",
+      "slug": "palace-resorts"
+    },
+    {
+      "uuid": "0192d256-2e6f-70d1-987c-b0fde40b1e49",
+      "name": "Panduro",
+      "slug": "panduro"
+    },
+    {
+      "uuid": "01896312-a60c-719b-bad6-c0a2fb5633d3",
+      "name": "Paradoux",
+      "slug": "paradoux"
+    },
+    {
+      "uuid": "01896311-5e91-70a4-97d5-33ea788e232e",
+      "name": "PatPat",
+      "slug": "patpat"
+    },
+    {
+      "uuid": "0189630c-8328-7252-83f1-61f2264604a2",
+      "name": "Parfyme Klikk",
+      "slug": "perfume-click"
+    },
+    {
+      "uuid": "0189630d-d608-71c5-a1d0-097db7774e63",
+      "name": "Petster",
+      "slug": "petster"
+    },
+    {
+      "uuid": "01896307-ce95-73ec-b705-8d5a7c4410b2",
+      "name": "Philips",
+      "slug": "philips"
+    },
+    {
+      "uuid": "01896309-e816-71c4-9860-a159091f5e51",
+      "name": "Pierre Robert",
+      "slug": "pierre-robert"
+    },
+    {
+      "uuid": "0189630a-69cf-7169-9e2f-cecf113e05cf",
+      "name": "pink or blue",
+      "slug": "pink-or-blue"
+    },
+    {
+      "uuid": "01896311-dcfe-71f5-84db-16af24f46d05",
+      "name": "Point A hotels",
+      "slug": "point-a-hotels"
+    },
+    {
+      "uuid": "0189630a-4f00-71b4-b13a-6a93082439a9",
+      "name": "Polarn O. Pyret",
+      "slug": "polarnopyret"
+    },
+    {
+      "uuid": "0189630a-1d99-7246-aa7c-e2c26d4ee5e0",
+      "name": "Proshop",
+      "slug": "proshop"
+    },
+    {
+      "uuid": "01896308-0dd3-730a-be51-faeaf0ab5c92",
+      "name": "Proteinfabrikken",
+      "slug": "proteinfabrikken"
+    },
+    {
+      "uuid": "01896311-5664-7143-9c4f-2a783c0f8b17",
+      "name": "Racketspecialisten",
+      "slug": "racketspecialisten"
+    },
+    {
+      "uuid": "0189630e-e559-73fb-8554-d9a161d6ff4e",
+      "name": "Rains",
+      "slug": "rains"
+    },
+    {
+      "uuid": "0189630e-5109-73dc-8c40-0ed3b9264c9c",
+      "name": "Ray-Ban",
+      "slug": "ray-ban"
+    },
+    {
+      "uuid": "01896311-b046-7318-82e2-70f8379afdbf",
+      "name": "Razer",
+      "slug": "razer"
+    },
+    {
+      "uuid": "0189630e-c997-73c7-b0d4-60455d43c0ed",
+      "name": "Rimowa",
+      "slug": "rimowa"
+    },
+    {
+      "uuid": "0189630c-4ce6-7044-9ea1-fd1ac49aae97",
+      "name": "RITO",
+      "slug": "rito"
+    },
+    {
+      "uuid": "01896307-a666-701a-8245-ad7183712454",
+      "name": "Royal Design",
+      "slug": "royal-design"
+    },
+    {
+      "uuid": "01896309-733c-72e9-b89a-e36db36d144c",
+      "name": "Rum21",
+      "slug": "room21"
+    },
+    {
+      "uuid": "0192958a-3d0c-73f6-8808-283b59ffe62b",
+      "name": "Safira",
+      "slug": "safira"
+    },
+    {
+      "uuid": "0189630d-7f2a-726e-829a-087102a2c6d5",
+      "name": "Sail Racing",
+      "slug": "sail-racing"
+    },
+    {
+      "uuid": "0189630b-bda2-7207-be7a-a0cdc21e57ac",
+      "name": "Senze of Joy",
+      "slug": "senze-of-joy"
+    },
+    {
+      "uuid": "0189630d-a963-7362-acc9-5b0483382158",
+      "name": "Shampoohuset",
+      "slug": "shampoohuset"
+    },
+    {
+      "uuid": "0189630c-e3eb-7109-aa86-da2d2e470c7d",
+      "name": "Shaping New Tomorrow",
+      "slug": "shaping-new-tomorrow"
+    },
+    {
+      "uuid": "01896307-ab79-72ea-bf3a-8259132aba47",
+      "name": "Shopping4net",
+      "slug": "shopping4net"
+    },
+    {
+      "uuid": "01896311-0958-725c-b6df-4d2efeaf54c9",
+      "name": "Sif Jakobs",
+      "slug": "sif-jakobs"
+    },
+    {
+      "uuid": "01896311-a08d-70e2-89fd-36b434472d63",
+      "name": "Sistie",
+      "slug": "sistie"
+    },
+    {
+      "uuid": "0192e72c-a8bf-70f2-9a92-f53e250832fa",
+      "name": "Skinsecret",
+      "slug": "skinsecret"
+    },
+    {
+      "uuid": "01896308-a62c-70f9-b1e8-cf2fa8091102",
+      "name": "Skistart.com",
+      "slug": "skistart.com"
+    },
+    {
+      "uuid": "0191bc6a-8a5f-72c5-9a44-119d164df38e",
+      "name": "Skogstad Sport",
+      "slug": "skogstad-sport"
+    },
+    {
+      "uuid": "01896309-8695-729b-af3d-7858d358e60a",
+      "name": "Skruvat",
+      "slug": "skruvat"
+    },
+    {
+      "uuid": "01918df2-dab9-710b-8016-dbfec600d48f",
+      "name": "Sky Showtime",
+      "slug": "sky-showtime"
+    },
+    {
+      "uuid": "01896308-cbba-717c-b38b-bcf4e27a3d91",
+      "name": "Slikkepott",
+      "slug": "slikkepott"
+    },
+    {
+      "uuid": "0189630c-0772-7321-9da9-387a0ee95590",
+      "name": "SmartBuyGlasses",
+      "slug": "smartbuyglasses"
+    },
+    {
+      "uuid": "0189630d-6184-73b8-af87-07c88542f28c",
+      "name": "Smartphoto",
+      "slug": "smartphoto-se"
+    },
+    {
+      "uuid": "01896308-f50b-7352-aaee-e20a3702dfd3",
+      "name": "Sneakersnstuff",
+      "slug": "sneakersnstuff"
+    },
+    {
+      "uuid": "0189630c-8c9e-72bb-af35-0a7fb3c11d3b",
+      "name": "Soma",
+      "slug": "soma"
+    },
+    {
+      "uuid": "0189630e-a751-7311-930d-de861b1a0c5d",
+      "name": "Sonos",
+      "slug": "sonos"
+    },
+    {
+      "uuid": "01896310-81bf-70e0-9a83-93d54416f3c5",
+      "name": "SoundStoreXL",
+      "slug": "soundstorexl"
+    },
+    {
+      "uuid": "01936d2f-b6e3-703a-9af6-bf37c5f54a0f",
+      "name": "Søstrene Grene",
+      "slug": "sostrene-grene"
+    },
+    {
+      "uuid": "0189630d-9c47-7226-8cf0-116bf98e9106",
+      "name": "Sparnet",
+      "slug": "sparnet"
+    },
+    {
+      "uuid": "0189630a-018c-7202-bf9f-048efc5cbd33",
+      "name": "Sportgymbutikken",
+      "slug": "sportgymbutiken"
+    },
+    {
+      "uuid": "0189630a-a23c-72dc-810e-5b2ca5f4a012",
+      "name": "Sportsdeal",
+      "slug": "sportsdeal-1"
+    },
+    {
+      "uuid": "0189630c-9fc9-73e0-b4b9-d1f9ad971859",
+      "name": "Stay In Place",
+      "slug": "stay-in-place"
+    },
+    {
+      "uuid": "0189630c-f505-7383-a3ca-f070bfb00deb",
+      "name": "Staypro",
+      "slug": "staypro"
+    },
+    {
+      "uuid": "0189630f-44d8-7219-8aad-021e37fd7fab",
+      "name": "Stella McCartney",
+      "slug": "stella-mccartney"
+    },
+    {
+      "uuid": "01896311-d42a-7306-9013-cd8312b1eb3e",
+      "name": "StockX",
+      "slug": "stockx"
+    },
+    {
+      "uuid": "01896308-9574-7200-98c1-2eb995cc8de0",
+      "name": "Stormberg",
+      "slug": "stormberg"
+    },
+    {
+      "uuid": "0189630c-97b2-70fc-b190-002eaed90291",
+      "name": "Storytel",
+      "slug": "storytel-no"
+    },
+    {
+      "uuid": "018abc11-7a28-71e0-bc8a-9e9617c71d80",
+      "name": "Strim",
+      "slug": "strim"
+    },
+    {
+      "uuid": "01932555-abce-7312-9a6d-1a06f2713634",
+      "name": "SWIMS",
+      "slug": "swims"
+    },
+    {
+      "uuid": "0189630b-94d9-73d6-9d65-2f31fd21738c",
+      "name": "Telia",
+      "slug": "telia-bredband-og-tv"
+    },
+    {
+      "uuid": "0189630d-ca69-71ce-942c-14601cb449fc",
+      "name": "TheChef",
+      "slug": "the-chef"
+    },
+    {
+      "uuid": "01896312-cc64-7251-bf1c-7300f7d28b3d",
+      "name": "Tilbords",
+      "slug": "tilbords-1"
+    },
+    {
+      "uuid": "01896308-7f87-71ee-b3bc-53cb7efe268f",
+      "name": "Timarco",
+      "slug": "timarco"
+    },
+    {
+      "uuid": "01896308-e17a-7082-8889-9601fc9f7211",
+      "name": "Tirendo",
+      "slug": "tirendo"
+    },
+    {
+      "uuid": "01896311-d273-72c3-ad5c-af9210aa9c7a",
+      "name": "Trapessko",
+      "slug": "trapessko"
+    },
+    {
+      "uuid": "0189630a-c0fe-73f3-8174-eaf25c05c750",
+      "name": "Under Amour",
+      "slug": "under-amour"
+    },
+    {
+      "uuid": "0189630f-8e6e-70c8-ba6f-34d0d4b39e41",
+      "name": "Urban Outfitters",
+      "slug": "urban-outfitters"
+    },
+    {
+      "uuid": "0189630d-fb5b-7045-9d21-b6efc2c4643d",
+      "name": "Urban Trend",
+      "slug": "urban-trend"
+    },
+    {
+      "uuid": "0189630a-06ef-7019-bd36-354239ce26d9",
+      "name": "Urbanears",
+      "slug": "zoundindustries"
+    },
+    {
+      "uuid": "0189630b-f7b0-73db-a7c0-55cf9e666fa5",
+      "name": "Urverket.no",
+      "slug": "urverket.no"
+    },
+    {
+      "uuid": "019377df-d9a3-7347-a95e-9334e52d7b2d",
+      "name": "Velosophy",
+      "slug": "velosophy"
+    },
+    {
+      "uuid": "01896309-eb6b-71bc-b887-5602e27dd701",
+      "name": "VetZoo",
+      "slug": "vetzoo"
+    },
+    {
+      "uuid": "0189630e-3cfe-7166-9125-0e412743ab2c",
+      "name": "Viator",
+      "slug": "viator"
+    },
+    {
+      "uuid": "01896309-1356-70ef-9d7f-f03e87d2ee25",
+      "name": "VidaXL",
+      "slug": "vida-xl-se"
+    },
+    {
+      "uuid": "01896311-f8a9-73a3-8d80-002e5ddc2d18",
+      "name": "Viking Footwear",
+      "slug": "viking-footwear"
+    },
+    {
+      "uuid": "01896307-f9e6-7111-a61f-1c0c06528662",
+      "name": "Vistaprint",
+      "slug": "vistaprint"
+    },
+    {
+      "uuid": "018abc11-afc8-73c7-8884-1138ad087849",
+      "name": "VITA",
+      "slug": "vita-no"
+    },
+    {
+      "uuid": "0189630d-1649-7204-bea4-2cb52d72ef26",
+      "name": "VitaePro",
+      "slug": "vitaepro"
+    },
+    {
+      "uuid": "01896309-2e3d-72a3-9b8b-b02451a20216",
+      "name": "VPG.no",
+      "slug": "vpg.no"
+    },
+    {
+      "uuid": "0189630e-add5-7020-b4e8-4cea83c5b26c",
+      "name": "Weber",
+      "slug": "weber"
+    },
+    {
+      "uuid": "0189630f-1164-724e-add9-82aae07ee93f",
+      "name": "WEEKDAY",
+      "slug": "weekday"
+    },
+    {
+      "uuid": "0189630a-bd91-71c6-96f0-f876aa42c352",
+      "name": "White One",
+      "slug": "white-one"
+    },
+    {
+      "uuid": "0190821c-b4cc-7104-bb17-0551e0e4f28c",
+      "name": "Widforss",
+      "slug": "widforss"
+    },
+    {
+      "uuid": "0189630c-73eb-712d-a477-ea7f43fbb5d0",
+      "name": "Won Hundred",
+      "slug": "won-hundred"
+    },
+    {
+      "uuid": "01896312-a2bd-70b3-b51c-9610a04ab888",
+      "name": "X-life",
+      "slug": "x-life"
+    },
+    {
+      "uuid": "0189630b-fef3-70b3-953f-1b0c8875ef34",
+      "name": "Xplora",
+      "slug": "xplora"
+    },
+    {
+      "uuid": "0189630c-2642-715e-ba14-daaaa97b67a7",
+      "name": "Yoins",
+      "slug": "yoins"
+    },
+    {
+      "uuid": "0189630d-090d-71ba-a708-cc740649c2f0",
+      "name": "YouWish",
+      "slug": "youwish"
+    },
+    {
+      "uuid": "01896312-b5e6-7274-8e4a-7eb11e4ab5a9",
+      "name": "ZOO.no",
+      "slug": "zoo.se-1"
+    }
+  ]
+}
