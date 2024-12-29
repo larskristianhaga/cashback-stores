@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/tls"
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -127,6 +128,9 @@ func createInsecureHTTPClient() *http.Client {
 }
 
 func combineData(sasShops SASShopsData, viaTrumfShops ViaTrumfShopData) []APIResponseData {
+	sasStoreBaseURL := "https://onlineshopping.flysas.com/nb-NO/butikker"
+	trumfnetthandelBaseUrl := "https://trumfnetthandel.no/cashback"
+
 	var combinedDataMap = make(map[string]APIResponseData)
 
 	for _, sasShop := range sasShops.Data {
@@ -140,6 +144,7 @@ func combineData(sasShops SASShopsData, viaTrumfShops ViaTrumfShopData) []APIRes
 			data.SasOnlineShoppingExtra = &SasOnlineShoppingExtra{
 				UUID: sasShop.UUID,
 				Slug: sasShop.Slug,
+				Url:  fmt.Sprintf("%s/%s/%s", sasStoreBaseURL, sasShop.Slug, sasShop.UUID),
 			}
 			combinedDataMap[sasShop.Name] = data
 		}
@@ -153,6 +158,7 @@ func combineData(sasShops SASShopsData, viaTrumfShops ViaTrumfShopData) []APIRes
 			if viaTrumfShop.Source == Trumfnetthandel {
 				data.TrumfNetthandelExtra = &TrumfNetthandelExtra{
 					Slug: viaTrumfShop.Name,
+					Url:  fmt.Sprintf("%s/%s", trumfnetthandelBaseUrl, viaTrumfShop.Name),
 				}
 			}
 			combinedDataMap[viaTrumfShop.Name] = data
@@ -165,6 +171,7 @@ func combineData(sasShops SASShopsData, viaTrumfShops ViaTrumfShopData) []APIRes
 				data := combinedDataMap[viaTrumfShop.Name]
 				data.TrumfNetthandelExtra = &TrumfNetthandelExtra{
 					Slug: viaTrumfShop.Name,
+					Url:  fmt.Sprintf("%s/%s", trumfnetthandelBaseUrl, viaTrumfShop.Name),
 				}
 				combinedDataMap[viaTrumfShop.Name] = data
 			}
@@ -226,12 +233,14 @@ type APIResponseData struct {
 }
 
 type TrumfNetthandelExtra struct {
-	Slug string `json:"slug,omitempty"`
+	Slug string `json:"slug"`
+	Url  string `json:"url"`
 }
 
 type SasOnlineShoppingExtra struct {
-	UUID string `json:"uuid,omitempty"`
-	Slug string `json:"slug,omitempty"`
+	UUID string `json:"uuid"`
+	Slug string `json:"slug"`
+	Url  string `json:"url"`
 }
 
 const (
