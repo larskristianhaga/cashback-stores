@@ -37,26 +37,40 @@ func RootHandler(w http.ResponseWriter, _ *http.Request) {
 	log.Println("Found", len(getViatrumfShops.Data), "ViaTrumf shops")
 
 	// Combine the data into a single JSON object of type APIResponse.
-	var combinedData []APIResponseData
+	var combinedDataMap = make(map[string]APIResponseData)
+
 	for _, sasShop := range getSasShops.Data {
-		combinedData = append(combinedData, APIResponseData{
+		combinedDataMap[sasShop.Name] = APIResponseData{
 			Name:   sasShop.Name,
 			Source: []string{sasShop.Source},
-			SASShopExtra: SASShopExtra{
+			SasOnlineShoppingExtra: SasOnlineShoppingExtra{
 				UUID: sasShop.UUID,
 				Slug: sasShop.Slug,
 			},
-		})
+		}
 	}
 
 	for _, viaTrumfShop := range getViatrumfShops.Data {
-		combinedData = append(combinedData, APIResponseData{
-			Name:   viaTrumfShop.Name,
-			Source: []string{viaTrumfShop.Source},
-			TrumfNetthandelShopExtra: TrumfNetthandelShopExtra{
+		if data, exists := combinedDataMap[viaTrumfShop.Name]; exists {
+			data.Source = append(data.Source, viaTrumfShop.Source)
+			data.TrumfNetthandelExtra = TrumfNetthandelExtra{
 				Slug: viaTrumfShop.Name,
-			},
-		})
+			}
+			combinedDataMap[viaTrumfShop.Name] = data
+		} else {
+			combinedDataMap[viaTrumfShop.Name] = APIResponseData{
+				Name:   viaTrumfShop.Name,
+				Source: []string{viaTrumfShop.Source},
+				TrumfNetthandelExtra: TrumfNetthandelExtra{
+					Slug: viaTrumfShop.Name,
+				},
+			}
+		}
+	}
+
+	var combinedData []APIResponseData
+	for _, data := range combinedDataMap {
+		combinedData = append(combinedData, data)
 	}
 
 	combinedDataJSON, err := json.Marshal(APIResponse{Data: combinedData})
@@ -100,7 +114,7 @@ func getSasShops() SASShopsData {
 
 	// Add source
 	for i := range sasShops.Data {
-		sasShops.Data[i].Source = "sasonlineshopping"
+		sasShops.Data[i].Source = Sasonlineshopping
 	}
 
 	return sasShops
@@ -133,7 +147,7 @@ func getViatrumfShops() ViaTrumfShopData {
 	// Return extracted elements, as a JSON object, and add source
 	var shops []ViaTrumfShop
 	for _, element := range elements {
-		shops = append(shops, ViaTrumfShop{Name: element, Source: "trumfnetthandel"})
+		shops = append(shops, ViaTrumfShop{Name: element, Source: Trumfnetthandel})
 	}
 
 	return ViaTrumfShopData{Data: shops}
@@ -171,17 +185,22 @@ type APIResponse struct {
 }
 
 type APIResponseData struct {
-	Name                     string                   `json:"name"`
-	Source                   []string                 `json:"source"`
-	SASShopExtra             SASShopExtra             `json:"sas_shop_extra"`
-	TrumfNetthandelShopExtra TrumfNetthandelShopExtra `json:"trumf_netthandel_shop_extra"`
+	Name                   string                 `json:"name"`
+	Source                 []string               `json:"source"`
+	TrumfNetthandelExtra   TrumfNetthandelExtra   `json:"trumfnetthandel_extra"`
+	SasOnlineShoppingExtra SasOnlineShoppingExtra `json:"sasonlineshopping_extra"`
 }
 
-type SASShopExtra struct {
+type TrumfNetthandelExtra struct {
+	Slug string `json:"slug"`
+}
+
+type SasOnlineShoppingExtra struct {
 	UUID string `json:"uuid"`
 	Slug string `json:"slug"`
 }
 
-type TrumfNetthandelShopExtra struct {
-	Slug string `json:"slug"`
-}
+const (
+	Trumfnetthandel   = "trumfnetthandel"
+	Sasonlineshopping = "sasonlineshopping"
+)
