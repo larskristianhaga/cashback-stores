@@ -1,8 +1,6 @@
 app = 'cashback-stores'
 primary_region = 'arn'
 
-[build]
-
 [env]
   PORT = '8080'
 
