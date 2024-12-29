@@ -36,20 +36,30 @@ func RootHandler(w http.ResponseWriter, _ *http.Request) {
 	getViatrumfShops := getViatrumfShops()
 	log.Println("Found", len(getViatrumfShops.Data), "ViaTrumf shops")
 
-	// Combine the two data sets into one
-	combinedData := struct {
-		SASShopsData     SASShopsData
-		ViaTrumfShopData ViaTrumfShopData
-	}{
-		SASShopsData:     SASShopsData{},
-		ViaTrumfShopData: ViaTrumfShopData{},
+	// Combine the data into a single JSON object of type APIResponse.
+	var combinedData []APIResponseData
+	for _, sasShop := range getSasShops.Data {
+		combinedData = append(combinedData, APIResponseData{
+			Name:   sasShop.Name,
+			Source: []string{sasShop.Source},
+			SASShopExtra: SASShopExtra{
+				UUID: sasShop.UUID,
+				Slug: sasShop.Slug,
+			},
+		})
 	}
 
-	combinedData.SASShopsData = getSasShops
-	combinedData.ViaTrumfShopData = getViatrumfShops
+	for _, viaTrumfShop := range getViatrumfShops.Data {
+		combinedData = append(combinedData, APIResponseData{
+			Name:   viaTrumfShop.Name,
+			Source: []string{viaTrumfShop.Source},
+			TrumfNetthandelShopExtra: TrumfNetthandelShopExtra{
+				Slug: viaTrumfShop.Name,
+			},
+		})
+	}
 
-	// Convert the combined data to JSON
-	combinedDataJSON, err := json.Marshal(combinedData)
+	combinedDataJSON, err := json.Marshal(APIResponse{Data: combinedData})
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -161,10 +171,10 @@ type APIResponse struct {
 }
 
 type APIResponseData struct {
-	Name   string   `json:"name"`
-	Source []string `json:"source"`
-	SASShopExtra
-	ViaTrumfShopExtra
+	Name                     string                   `json:"name"`
+	Source                   []string                 `json:"source"`
+	SASShopExtra             SASShopExtra             `json:"sas_shop_extra"`
+	TrumfNetthandelShopExtra TrumfNetthandelShopExtra `json:"trumf_netthandel_shop_extra"`
 }
 
 type SASShopExtra struct {
@@ -172,6 +182,6 @@ type SASShopExtra struct {
 	Slug string `json:"slug"`
 }
 
-type ViaTrumfShopExtra struct {
+type TrumfNetthandelShopExtra struct {
 	Slug string `json:"slug"`
 }
