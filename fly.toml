@@ -1,4 +1,4 @@
-app = 'cashback-stores-api'
+app = 'cashbackstoresapi'
 primary_region = 'arn'
 
 [env]
