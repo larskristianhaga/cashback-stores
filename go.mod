@@ -1,7 +1,9 @@
 module cashback-stores/app
 
 go 1.23
-require github.com/PuerkitoBio/goquery v1.10.1
+toolchain go1.24.1
+
+require github.com/PuerkitoBio/goquery v1.10.2
 
 require (
 	github.com/andybalholm/cascadia v1.3.3 // indirect
