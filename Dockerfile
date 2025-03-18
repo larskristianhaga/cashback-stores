@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build -v -o /run-app .
 
-FROM alpine:3.21
+FROM alpine:latest
 
 COPY --from=builder /run-app /usr/local/bin/
 CMD ["run-app"]
