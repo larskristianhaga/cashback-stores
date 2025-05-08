@@ -1,4 +1,4 @@
-FROM golang:1.23-alpine AS builder
+FROM golang:1.24-alpine AS builder
 
 WORKDIR /usr/src/app
 
@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build -v -o /run-app .
 
-FROM alpine:3.21
+FROM alpine:latest
 
 COPY --from=builder /run-app /usr/local/bin/
 CMD ["run-app"]
