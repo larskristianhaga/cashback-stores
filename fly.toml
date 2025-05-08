@@ -1,5 +1,5 @@
 app = 'cashbackstoresapi'
-primary_region = 'arn'
+primary_region = 'ams'
 
 [env]
   PORT = '8080'
