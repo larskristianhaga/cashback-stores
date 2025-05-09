@@ -8,9 +8,11 @@ RUN go mod download && go mod verify
 
 COPY . .
 
-RUN go build -v -o /run-app .
+RUN CGO_ENABLED=0 go build -v -o /run-app .
 
-FROM alpine:latest
+FROM gcr.io/distroless/static-debian12
+
+EXPOSE 8080
 
 COPY --from=builder /run-app /usr/local/bin/
 CMD ["run-app"]
