@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -250,19 +251,23 @@ const (
 
 func loggingMiddleware(next http.HandlerFunc) http.HandlerFunc {
     return func(w http.ResponseWriter, r *http.Request) {
-        ip := r.Header.Get("X-Forwarded-For")
-        if ip == "" {
-            ip = r.Header.Get("X-Real-IP")
-        }
-        if ip == "" {
+        var ip string
+
+        xForwardedFor := r.Header.Get("X-Forwarded-For")
+        if xForwardedFor != "" {
+            ips := strings.Split(xForwardedFor, ",")
+            ip = strings.TrimSpace(ips[0])
+        } else if realIP := r.Header.Get("X-Real-IP"); realIP != "" {
+            ip = realIP
+        } else {
             ip = r.RemoteAddr
         }
 
         userAgent := r.Header.Get("User-Agent")
         event := r.URL.Path
 
-	log.SetFlags(0)
-	log.Printf("Request incoming; IP: %s Event: \"%s\" Status: \"%s\" UserAgent:\"%s\"", ip, event, "-", userAgent)
+        log.SetFlags(0)
+        log.Printf("Request incoming; IP: %s Event: \"%s\" Status: \"%s\" UserAgent:\"%s\"", ip, event, "-", userAgent)
 
         next(w, r)
     }
