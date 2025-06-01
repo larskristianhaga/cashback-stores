@@ -19,9 +19,9 @@ func main() {
 	}
 	log.Println("App live and listening on port:", port)
 
-	http.HandleFunc("/", RootHandler)
-	http.HandleFunc("/ping", PingHandler)
-	http.HandleFunc("/health", HealthHandler)
+	http.HandleFunc("/", loggingMiddleware(RootHandler))
+	http.HandleFunc("/ping", loggingMiddleware(PingHandler))
+	http.HandleFunc("/health", loggingMiddleware(HealthHandler))
 
 	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
@@ -247,3 +247,22 @@ const (
 	Trumfnetthandel   = "trumfnetthandel"
 	Sasonlineshopping = "sasonlineshopping"
 )
+
+func loggingMiddleware(next http.HandlerFunc) http.HandlerFunc {
+    return func(w http.ResponseWriter, r *http.Request) {
+        ip := r.Header.Get("X-Forwarded-For")
+        if ip == "" {
+            ip = r.Header.Get("X-Real-IP")
+        }
+        if ip == "" {
+            ip = r.RemoteAddr
+        }
+
+        userAgent := r.Header.Get("User-Agent")
+        event := r.URL.Path
+
+	log.Printf("Request incoming; IP: %s Event: \"%s\" Status: \"%s\" UserAgent:\"%s\"", ip, event, "-", userAgent)
+
+        next(w, r)
+    }
+}
