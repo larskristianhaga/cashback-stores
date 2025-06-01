@@ -4,13 +4,11 @@ import (
 	"crypto/tls"
 	"encoding/json"
 	"fmt"
+	"github.com/PuerkitoBio/goquery"
 	"io"
 	"log"
 	"net/http"
 	"os"
-	"strings"
-
-	"github.com/PuerkitoBio/goquery"
 )
 
 func main() {
@@ -250,25 +248,38 @@ const (
 )
 
 func loggingMiddleware(next http.HandlerFunc) http.HandlerFunc {
-    return func(w http.ResponseWriter, r *http.Request) {
-        var ip string
+	return func(w http.ResponseWriter, r *http.Request) {
+		ip := r.Header.Get("X-Forwarded-For")
+		if ip == "" {
+			ip = r.Header.Get("X-Real-IP")
+		}
+		if ip == "" {
+			ip = r.RemoteAddr
+		}
 
-        xForwardedFor := r.Header.Get("X-Forwarded-For")
-        if xForwardedFor != "" {
-            ips := strings.Split(xForwardedFor, ",")
-            ip = strings.TrimSpace(ips[0])
-        } else if realIP := r.Header.Get("X-Real-IP"); realIP != "" {
-            ip = realIP
-        } else {
-            ip = r.RemoteAddr
-        }
+		userAgent := r.Header.Get("User-Agent")
+		event := r.Method + " " + r.URL.Path + " " + r.Proto
 
-        userAgent := r.Header.Get("User-Agent")
-        event := r.URL.Path
+		logEntry := LogEntry{
+			Message:   "Request incoming",
+			IP:        ip,
+			Event:     event,
+			Status:    "-",
+			UserAgent: userAgent,
+		}
 
-        log.SetFlags(0)
-        log.Printf("Request incoming; IP: %s Event: \"%s\" Status: \"%s\" UserAgent:\"%s\"", ip, event, "-", userAgent)
+		jsonLog, _ := json.Marshal(logEntry)
+		log.SetFlags(0)
+		log.Println(string(jsonLog))
 
-        next(w, r)
-    }
+		next(w, r)
+	}
+}
+
+type LogEntry struct {
+	Message   string `json:"message"`
+	IP        string `json:"ip"`
+	Event     string `json:"event"`
+	Status    string `json:"status"`
+	UserAgent string `json:"user_agent"`
 }
