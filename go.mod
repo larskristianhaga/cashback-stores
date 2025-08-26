@@ -1,6 +1,6 @@
 module cashback-stores/app
 
-go 1.24.1
+go 1.25
 
 require github.com/PuerkitoBio/goquery v1.10.3
 
